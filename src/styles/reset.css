@@ -1,0 +1,65 @@
+/* 1. Використовуємо більш інтуїтивну блочну модель */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Скидаємо всі зовнішні та внутрішні відступи за замовчуванням */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. Налаштовуємо базову висоту сторінки та висоту рядка */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    /* Покращує швидкість рендерингу тексту */
+    -webkit-font-smoothing: antialiased;
+    /* Робить шрифти гладкішими на macOS/iOS */
+}
+
+/* 4. Видаляємо стандартні маркери для списків */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 5. Робимо медіа-елементи адаптивними за замовчуванням */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 6. Успадковуємо шрифти для елементів форм (вони часто мають свої дефолтні шрифти) */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Уникаємо переповнення тексту (text overflow) */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Забезпечуємо плавний скрол по сторінці, якщо користувач не вимкнув анімації в системі */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}

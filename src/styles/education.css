@@ -1,0 +1,129 @@
+/* =========================================
+   СЕКЦІЯ ОСВІТИ (ТАЙМЛАЙН)
+   ========================================= */
+
+.education-section {
+    background-color: #f0f1f3;
+    /* Білий фон для контрасту з проєктами */
+    padding: 40px 20px;
+    color: #333333;
+}
+
+/* Контейнер для лінії часу */
+.timeline {
+    position: relative;
+    /* Створюємо вертикальну лінію зліва */
+    border-left: 3px solid #e0e4e8;
+    padding-left: 30px;
+    margin-top: 30px;
+    max-width: 800px;
+    /* Трохи звужуємо для кращого вигляду */
+}
+
+/* Блок одного навчального закладу */
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Кружечок на лінії часу */
+.timeline-dot {
+    position: absolute;
+    /* Вираховуємо точну позицію, щоб кружечок став рівно на лінію */
+    left: -39px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border: 3px solid #79859b;
+    /* Твій фірмовий колір */
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    /* Плавна анімація */
+}
+
+/* Контент-картка для закладу */
+.timeline-content {
+    background: #f8f9fa;
+    /* Дуже світлий сірий фон картки */
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid transparent;
+    /* Прихована рамка для анімації */
+    transition: all 0.3s ease;
+}
+
+/* =========================================
+   КРУТІ ХОВЕР-ЕФЕКТИ (ПРИ НАВЕДЕННІ)
+   ========================================= */
+
+.timeline-item:hover .timeline-dot {
+    background-color: #79859b;
+    /* Кружечок заповнюється кольором */
+    box-shadow: 0 0 10px rgba(121, 133, 155, 0.5);
+    /* З'являється світіння */
+    transform: scale(1.3);
+    /* Кружечок трохи збільшується */
+}
+
+.timeline-item:hover .timeline-content {
+    border-left: 4px solid #79859b;
+    /* З'являється кольорова смужка зліва */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    /* Картка відкидає тінь */
+    background: #ffffff;
+    transform: translateX(5px);
+    /* Картка злегка зсувається вправо */
+}
+
+/* =========================================
+   ТИПОГРАФІКА ВРЕДИНІ КАРТКИ
+   ========================================= */
+
+.edu-institution {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    color: #333333;
+}
+
+/* Оформлення років навчання як крутого бейджа */
+.edu-dates {
+    display: inline-block;
+    font-size: 13px;
+    color: #79859b;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: rgba(121, 133, 155, 0.15);
+    /* Напівпрозорий фон бейджа */
+    padding: 4px 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.edu-degree {
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* =========================================
+   ПЛАНШЕТИ ТА ПК
+   ========================================= */
+@media (min-width: 768px) {
+    .education-section {
+        padding: 60px 40px;
+    }
+
+    .edu-institution {
+        font-size: 22px;
+    }
+
+    .edu-degree {
+        font-size: 18px;
+    }
+}

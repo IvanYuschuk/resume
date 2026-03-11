@@ -1,0 +1,93 @@
+/* =========================================
+   БАЗОВІ СТИЛІ ТА МОБІЛЬНА ВЕРСІЯ (1 БЛОК В РЯД)
+   ========================================= */
+
+.main-footer {
+    background-color: #79859b;
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Центруємо самі блоки по горизонталі */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    width: 100%;
+    max-width: 250px;
+    /* Обмежуємо ширину на мобільному, щоб блок став по центру екрана */
+    margin: 0 auto;
+    /* Вирівнюємо сам блок по центру */
+}
+
+.footer-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+    /* Заголовок по лівому краю блоку */
+}
+
+.footer-list {
+    list-style-type: disc;
+    /* Повертаємо маркери для навичок */
+    margin: 0;
+    padding: 0 0 0 20px;
+    /* Повертаємо відступ зліва для списку */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Прибираємо маркери тільки там, де вони не потрібні (контакти) */
+.footer-list.no-bullets {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-list li {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    /* Текст пунктів списку строго по лівому краю */
+}
+
+.footer-list a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-list a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+/* =========================================
+   ПЛАНШЕТИ (2 БЛОКИ В РЯД)
+   ========================================= */
+@media (min-width: 768px) {
+    .footer-section {
+        width: calc(50% - 15px);
+        max-width: none;
+        /* Знімаємо обмеження ширини для планшетів */
+        margin: 0;
+    }
+}
+
+/* =========================================
+   КОМП'ЮТЕРИ (4 БЛОКИ В РЯД)
+   ========================================= */
+@media (min-width: 1024px) {
+    .footer-section {
+        width: calc(25% - 22.5px);
+    }
+}

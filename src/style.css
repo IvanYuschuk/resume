@@ -1,0 +1,12 @@
+@import url('./styles/header.css');
+@import url('./styles/footer.css');
+@import url('./styles/reset.css');
+@import url('./styles/summary.css');
+@import url('./styles/experiance.css');
+@import url('./styles/education.css');
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+
