@@ -1,108 +1,67 @@
-/* =========================================
-   СЕКЦІЯ ПРОЄКТІВ
-   ========================================= */
-
 .projects-section {
     background-color: #f0f1f3;
-    /* Такий самий фон, як у Summary */
     padding: 40px 20px;
     color: #333333;
-    /* Якщо хочеш такий самий шрифт, як на твоїй картинці, розкоментуй рядок нижче: */
-    /* font-family: 'Courier New', Courier, monospace; */
 }
 
-/* Відступи між проєктами */
 .project-item {
     margin-bottom: 35px;
 }
 
-/* Забираємо відступ у останнього проєкту, щоб не було зайвого місця знизу */
 .project-item:last-child {
     margin-bottom: 0;
 }
 
-/* Назва проєкту */
 .project-name {
     font-size: 20px;
     font-weight: normal;
-    /* На картинці заголовок проєкту не є жирним */
     margin: 0 0 10px 0;
 }
 
-/* Стилізація посилання */
 .project-link {
     color: inherit;
-    /* Бере колір тексту від батьківського елемента */
     text-decoration: underline;
 }
 
 .project-link:hover {
     color: #79859b;
-    /* Змінюємо колір на фірмовий при наведенні мишкою */
 }
 
-
-
-/* Опис проєкту */
 .project-desc {
     font-size: 16px;
     line-height: 1.6;
-    /* Зручний міжрядковий інтервал */
     margin: 0;
 }
 
-/* =========================================
-   СТИЛІ ДЛЯ ТЕГІВ (КНОПОК) СТЕКУ
-   ========================================= */
-
-/* Контейнер для кнопок */
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
-    /* Дозволяє кнопкам переноситися на новий рядок */
     gap: 10px;
-    /* Відстань між кнопками */
     margin: 0 0 15px 0;
     padding: 0;
     list-style: none;
-    /* Забираємо стандартні маркери списку */
 }
 
-/* Сама кнопка-тег */
 .tech-tag {
     background-color: transparent;
     color: #79859b;
-    /* Колір тексту - твій фірмовий */
     border: 1px solid #79859b;
-    /* Тонка рамка */
     padding: 6px 14px;
     border-radius: 20px;
-    /* Робить краї заокругленими (як пігулка) */
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 0.5px;
     cursor: default;
-    /* Курсор не змінюється на "палець", бо це не посилання */
-
-    /* Плавна анімація для всіх змін (колір, фон, тінь, позиція) */
     transition: all 0.3s ease;
 }
 
-/* Ефект при наведенні мишкою (Hover) */
 .tech-tag:hover {
     background-color: #79859b;
-    /* Заливка фірмовим кольором */
     color: #ffffff;
-    /* Текст стає білим */
     transform: translateY(-3px);
-    /* Легке підняття кнопочки вгору */
     box-shadow: 0 4px 8px rgba(121, 133, 155, 0.3);
-    /* Легка тінь в колір рамки */
 }
 
-/* =========================================
-   МЕДІА-ЗАПИТИ ДЛЯ БІЛЬШИХ ЕКРАНІВ
-   ========================================= */
 @media (min-width: 768px) {
     .projects-section {
         padding: 60px 40px;
@@ -110,12 +69,10 @@
 
     .project-name {
         font-size: 22px;
-        /* Збільшуємо шрифт назви на планшетах/ПК */
     }
 
     .project-desc {
         font-size: 18px;
-        /* Робимо текст більшим для великих екранів */
     }
     .tech-tag {
         font-size: 15px;
