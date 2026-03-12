@@ -20,7 +20,7 @@
 
 .project-link {
     color: inherit;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .project-link:hover {
